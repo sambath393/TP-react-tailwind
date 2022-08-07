@@ -65,9 +65,5 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
-    // 'import/no-extraneous-dependencies': [
-    //   0,
-    //   { devDependencies: false, optionalDependencies: false, peerDependencies: false },
-    // ],
   },
 };
