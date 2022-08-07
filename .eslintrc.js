@@ -1,4 +1,7 @@
 module.exports = {
+  root: true,
+
+  parser: '@babel/eslint-parser',
   env: {
     browser: true,
     es2021: true,
@@ -16,6 +19,10 @@ module.exports = {
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ['@babel/preset-react'],
+    },
   },
   plugins: ['react'],
   rules: {
