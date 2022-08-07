@@ -5,6 +5,14 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    amd: true, // Enables require() and define() as global variables as per the amd spec.
+    node: true, // Enables Node.js global variables and Node.js scoping.
+  },
+
+  settings: {
+    react: {
+      version: 'detect', // Automatically detect the react version
+    },
   },
   extends: [
     'eslint:recommended',
@@ -24,7 +32,7 @@ module.exports = {
       presets: ['@babel/preset-react'],
     },
   },
-  plugins: ['react'],
+  plugins: ['react', 'prettier'],
   rules: {
     'prettier/prettier': ['error', { endOfLine: 'auto' }, { usePrettierrc: true }], // Use our .prettierrc file as source
     'import/prefer-default-export': 'off',
@@ -57,9 +65,9 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
-    'import/no-extraneous-dependencies': [
-      0,
-      { devDependencies: false, optionalDependencies: false, peerDependencies: false },
-    ],
+    // 'import/no-extraneous-dependencies': [
+    //   0,
+    //   { devDependencies: false, optionalDependencies: false, peerDependencies: false },
+    // ],
   },
 };

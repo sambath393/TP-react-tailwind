@@ -1,10 +1,10 @@
-import './App.css';
+import '../styles/App.css';
 
 function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <p className='text-7xl'>
+        <p className='text-2xl'>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
