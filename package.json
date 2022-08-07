@@ -24,7 +24,8 @@
     "lint:js": "eslint ./src --ignore-path ./.gitignore",
     "lint:js:fix": "yarn lint:js --fix",
     "lint:css": "yarn stylelint \"src/**/*.css\"",
-    "lint:css:fix": "yarn lint:css --fix"
+    "lint:css:fix": "yarn lint:css --fix",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -55,5 +56,10 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "2.7.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test"
+    }
   }
 }
